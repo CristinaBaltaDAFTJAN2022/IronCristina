@@ -18,15 +18,23 @@ select staff_id, count(rental_id) from rental
 group by staff_id;
 
 -- 4) Using the film table, find out how many films were released.
-select count(film_id), release_year from film
-group by release_year; 
+select count(film_id) from film;
 
  -- 5) Using the film table, find out how many films there are of each rating.
 select count(film_id), rating from film
 group by rating;
 
  -- 6) What is the mean length of the film for each rating type. Round off the average lengths to two decimal places
+select rating, round(avg(length),2) from film
+group by rating
+
+select avg(length) from film
 
  -- 7) Which kind of movies (rating) have a mean duration of more than two hours?
- 
+select rating, round(avg(length),2) from film
+group by rating
+having avg(length)>120
+
+
+
  
