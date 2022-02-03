@@ -1,0 +1,38 @@
+Lab | Hypothesis Testing
+
+Instructions
+
+It is assumed that the mean systolic blood pressure is μ = 120 mm Hg. In the Honolulu Heart Study, a sample of n = 100 people had an average systolic blood pressure of 130.1 mm Hg with a standard deviation of 21.21 mm Hg. Is the group significantly different (with respect to systolic blood pressure!) from the regular population?
+
+
+1) Set up the hypothesis test.
+
+Ho: μ !=120 mm Hg
+Ha: μ = 120 mm Hg
+
+
+2) Write down all the steps followed for setting up the test.
+It is a two-tail test
+Fix the confidence level. = 95 %
+Significance level a=0.025
+
+If the test statistic is in the allowed region, (the allowed region is determined by the confidence level) fail to reject  the null hypothesis, otherwise reject the null hypothesis.
+
+
+
+Calculate the test statistic by hand and also code it in Python. It should be 4.76190. What decision can you make based on this calculated value?
+
+T=21.21
+mean of population
+
+T=(x-μ)/ X/10
+
+21.21 = (130.1-120)/ X/10
+
+X=4.7619
+
+tc = +-scipy.stats.t.ppf(0.975, df=99)
+-1.9842169515086827
+
+The test statistic is not in the allowed region
+Our t = 4.7619 > + -1.9842 =tc-> the null hypothesis is rejectet
